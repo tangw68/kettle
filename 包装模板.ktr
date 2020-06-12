@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>huilv</name>
+    <name>baozhuang</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -449,7 +449,7 @@
     </hop>
     <hop>
       <from>JavaScript代码 2</from>
-      <to>创建汇率接口</to>
+      <to>创建包装模板接口</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -463,13 +463,13 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>字段选择</from>
-      <to>JavaScript代码 2</to>
+      <from>生成记录 2</from>
+      <to>增加常量</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>生成记录 2</from>
-      <to>增加常量</to>
+      <from>字段选择</from>
+      <to>JavaScript代码 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -506,56 +506,26 @@
     </file>
     <fields>
       <field>
-        <name>ToCurrCode</name>
-        <xpath>//ToCurrCode</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>FromCurrCode</name>
-        <xpath>//FromCurrCode</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>EffDate</name>
-        <xpath>//EffDate</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>SellRate</name>
-        <xpath>//SellRate</xpath>
+        <name>PtNum</name>
+        <xpath>//PtNum</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>Description</name>
+        <xpath>/Description</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
         <format/>
         <currency/>
         <decimal/>
@@ -571,6 +541,141 @@
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>Specific</name>
+        <xpath>//Specific</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>PTDescripiton</name>
+        <xpath>//PTDescripiton</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>UM</name>
+        <xpath>//UM</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>UmDescription</name>
+        <xpath>//UmDescription</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>MatlQty</name>
+        <xpath>//MatlQty</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>PtDate</name>
+        <xpath>//PtDate</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>Statue</name>
+        <xpath>//Statue</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>Item</name>
+        <xpath>//Item</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>ItemDescription</name>
+        <xpath>//ItemDescription</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -746,10 +851,361 @@ var request='&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
         <jsScript_script>//Script here
-  var changedFrom=FromCurrCode.indexOf("CNY")!=-1?1:FromCurrCode.indexOf("EUR")!=-1?2:FromCurrCode.indexOf("HKD")!=-1?3:FromCurrCode.indexOf("JPY")!=-1?4:FromCurrCode.indexOf("USD")!=-1?5:0;
-  var changedTo=ToCurrCode.indexOf("CNY")!=-1?1:ToCurrCode.indexOf("EUR")!=-1?2:ToCurrCode.indexOf("HKD")!=-1?3:ToCurrCode.indexOf("JPY")!=-1?4:ToCurrCode.indexOf("USD")!=-1?5:0;
-  var refDate=EffDate.split("T")[0];
-  var a={"belongId":1241977617170796,"entityType":1241977577996687,"record":{"name":refDate+"-"+FromCurrCode+"-"+ToCurrCode,"customItem8__c":changedFrom,"customItem9__c":changedTo,"customItem6__c":SellRate,"updatedAt":RecordDate}}
+  var changedFrom="";
+   var changedUm="";
+
+  var select=[ {
+                    "label": "EA",
+                    "value": 1,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "g",
+                    "value": 2,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "KG",
+                    "value": 3,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "L",
+                    "value": 4,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "M",
+                    "value": 5,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "M2",
+                    "value": 6,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "mg",
+                    "value": 7,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "ml",
+                    "value": 8,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "T",
+                    "value": 9,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "把",
+                    "value": 10,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "包",
+                    "value": 11,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "本",
+                    "value": 12,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "袋",
+                    "value": 13,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "顶",
+                    "value": 14,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "付",
+                    "value": 15,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "个",
+                    "value": 16,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "根",
+                    "value": 17,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "盒",
+                    "value": 18,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "件",
+                    "value": 19,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "卷",
+                    "value": 20,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "块",
+                    "value": 21,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "捆",
+                    "value": 22,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "立方米",
+                    "value": 23,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "辆",
+                    "value": 24,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "米",
+                    "value": 25,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "盘",
+                    "value": 26,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "片",
+                    "value": 27,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "瓶",
+                    "value": 28,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "升",
+                    "value": 29,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "双",
+                    "value": 30,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "台",
+                    "value": 31,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "套",
+                    "value": 32,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "条",
+                    "value": 33,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "贴",
+                    "value": 34,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "桶",
+                    "value": 35,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "万粒",
+                    "value": 36,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "箱",
+                    "value": 37,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "张",
+                    "value": 38,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "支",
+                    "value": 39,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "只",
+                    "value": 40,
+                    "dependentValue": [],
+                    "disabled": false
+                }];
+   for(var i=0;i&lt;select.length;i++){
+     if(select[i].label==UM){
+            changedUm=select[i].value;
+		}
+
+	}
+   var select2=[{
+                    "label": "袋类",
+                    "value": 1,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "其它标签(样品)",
+                    "value": 2,
+                    "dependentValue": [],
+                    "disabled": true
+                },
+                {
+                    "label": "BOM1 塑料袋 15L箱",
+                    "value": 3,
+                    "dependentValue": [],
+                    "disabled": true
+                },
+                {
+                    "label": "医药级标签(产品)",
+                    "value": 4,
+                    "dependentValue": [],
+                    "disabled": true
+                },
+                {
+                    "label": "1产品包装",
+                    "value": 5,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "其它标签(产品)",
+                    "value": 6,
+                    "dependentValue": [],
+                    "disabled": false
+                },
+                {
+                    "label": "化妆品级标签(样品)",
+                    "value": 7,
+                    "dependentValue": [],
+                    "disabled": true
+                },
+                {
+                    "label": "2样品包装",
+                    "value": 8,
+                    "dependentValue": [],
+                    "disabled": true
+                },
+                {
+                    "label": "食品级标签(样品)",
+                    "value": 9,
+                    "dependentValue": [],
+                    "disabled": true
+                },
+                {
+                    "label": "食品级标签(产品)",
+                    "value": 10,
+                    "dependentValue": [],
+                    "disabled": true
+                },
+                {
+                    "label": "化妆品级标签(产品)",
+                    "value": 11,
+                    "dependentValue": [],
+                    "disabled": true
+                },
+                {
+                    "label": "纸盒纸箱类",
+                    "value": 12,
+                    "dependentValue": [],
+                    "disabled": true
+                },
+                {
+                    "label": "标准内包装",
+                    "value": 13,
+                    "dependentValue": [],
+                    "disabled": true
+                },
+                {
+                    "label": "医药级标签(样品)",
+                    "value": 14,
+                    "dependentValue": [],
+                    "disabled": true
+                },
+                {
+                    "label": "自制标签",
+                    "value": 15,
+                    "dependentValue": [],
+                    "disabled": true
+                },
+                {
+                    "label": "其它类",
+                    "value": 16,
+                    "dependentValue": [],
+                    "disabled": false
+                }];
+
+   for(var i=0;i&lt;select2.length;i++){
+     if(select2[i].label==UM){
+            changedFrom=select2[i].value;
+		}
+
+	}
+  var changeStatus=Statue.indexOf("O")!=-1?1:Statue.indexOf("A")!=-1?2:Statue.indexOf("B")!=-1?3:0;
+  
+  var a={"belongId":1241932225528221,"entityType":1241936075669837,"record":{"name":PtNum,"customItem2__c":changedFrom,"customItem3__c":MatlQty,"customItem4__c":changedUm,"customItem1__c":ItemDescription,"customItem6__c":changeStatus}}
   var b=JSON.stringify(a);
   </jsScript_script>
       </jsScript>
@@ -779,7 +1235,7 @@ var request='&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap
     </GUI>
   </step>
   <step>
-    <name>创建汇率接口</name>
+    <name>创建包装模板接口</name>
     <type>Rest</type>
     <description/>
     <distribute>Y</distribute>
@@ -999,7 +1455,7 @@ var request='&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap
         <currency/>
         <decimal/>
         <group/>
-        <nullif>ToCurrCode, FromCurrCode,EffDate,SellRate,RecordDate</nullif>
+        <nullif>PtNum,Description,RecordDate,Specific,PTDescripiton,UM,UmDescription,CustNum,ShipToName,MatlQty,PtDate,Item,ItemDescription,Statue</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -1023,7 +1479,7 @@ var request='&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap
         <currency/>
         <decimal/>
         <group/>
-        <nullif>SLCurrates</nullif>
+        <nullif>HXPacageTemplateHeads</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>

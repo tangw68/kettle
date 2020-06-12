@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>huilv</name>
+    <name>创建审批流</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -428,10 +427,10 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2020/06/09 13:48:49.375</created_date>
+    <created_date>2020/06/12 17:15:50.148</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2020/06/09 13:48:49.375</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <modified_date>2020/06/12 17:15:50.148</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -448,167 +447,11 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>JavaScript代码 2</from>
-      <to>创建汇率接口</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>HTTP post</from>
-      <to>Get data from XML 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get data from XML 2</from>
-      <to>字段选择</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>字段选择</from>
-      <to>JavaScript代码 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>生成记录 2</from>
       <to>增加常量</to>
       <enabled>Y</enabled>
     </hop>
   </order>
-  <step>
-    <name>Get data from XML 2</name>
-    <type>getXMLData</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
-    <encoding>UTF-8</encoding>
-    <file>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>ToCurrCode</name>
-        <xpath>//ToCurrCode</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>FromCurrCode</name>
-        <xpath>//FromCurrCode</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>EffDate</name>
-        <xpath>//EffDate</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>SellRate</name>
-        <xpath>//SellRate</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>Number</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>RecordDate</name>
-        <xpath>//RecordDate</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
-    <limit>0</limit>
-    <loopxpath>//IDO</loopxpath>
-    <IsInFields>Y</IsInFields>
-    <IsAFile>N</IsAFile>
-    <XmlField>result</XmlField>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>512</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step>
     <name>HTTP post</name>
     <type>HTTPPOST</type>
@@ -655,8 +498,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
-      <yloc>192</yloc>
+      <xloc>560</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -681,24 +524,77 @@
 
 //var request='&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:idow="http://frontstep.com/IDOWebService">&lt;soapenv:Header/>&lt;soapenv:Body>&lt;idow:LoadDataSet>&lt;!--Optional:-->&lt;idow:strSessionToken>b/XdI6IQzCviZOGJ0E+002DoKUFOPmVDkwpQDbQjm3w/qkdxDUzmqvSYEZDCmJGWpA23OTlhFpxRHFz3WOsvay8V58XdIp/UIsr5TpCdMwtW3QXF2ahwQYp2O6GzKlJcVckOUV/SBOSUYIUJFO6UvAmjgtjbeXpOTaM049ML+ZZRNPS4/Y8d1V2kJDwVSJXsqpsMkwewSjCp4lx+t74VOp9Gga7eggqP3mp2un11ccnmFvsQrEAY8pA5iphQJhnMOSjLgPttlzKaoB1CFvVzop73tBLZG+6d5AgZBJng6MeisEHca8gSLhicMLm3FTjaAUChswdtAxy53CZqY+5bYA==&lt;/idow:strSessionToken>&lt;!--Optional:-->&lt;idow:strIDOName>SLCurrates&lt;/idow:strIDOName>&lt;!--Optional:-->&lt;idow:strPropertyList> ToCurrCode, FromCurrCode,EffDate,SellRate,RecordDate&lt;/idow:strPropertyList>&lt;!--Optional:-->&lt;idow:strFilter>&lt;/idow:strFilter>&lt;!--Optional:-->&lt;idow:strOrderBy>&lt;/idow:strOrderBy>&lt;!--Optional:-->&lt;idow:strPostQueryMethod>&lt;/idow:strPostQueryMethod>&lt;idow:iRecordCap>1&lt;/idow:iRecordCap>&lt;/idow:LoadDataSet>&lt;/soapenv:Body>&lt;/soapenv:Envelope>'
 
-var request='&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:idow="http://frontstep.com/IDOWebService">'+
+var request='&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="webservices.services.weaver.com.cn" xmlns:web1="http://webservices.workflow.weaver">'+
    '&lt;soapenv:Header/>'+
    '&lt;soapenv:Body>'+
-      '&lt;idow:LoadDataSet>'+
-         
-         '&lt;idow:strSessionToken>'+sessionToken+'&lt;/idow:strSessionToken>'+
-         
-         '&lt;idow:strIDOName>'+tableName+'&lt;/idow:strIDOName>'+
+      '&lt;web:doCreateWorkflowRequest>'+
+         '&lt;web:in0>'+
+            
+            '&lt;web1:createTime>2020-06-12&lt;/web1:createTime>'+
+           
+            '&lt;web1:creatorId>1410&lt;/web1:creatorId>'+
+ 
+          
+            '&lt;web1:isnextflow>0&lt;/web1:isnextflow>'+
+
+            
+            '&lt;web1:remark>&lt;/web1:remark>'+
+
+            
+            '&lt;web1:requestLevel>0&lt;/web1:requestLevel>'+
+            
+            '&lt;web1:requestName>测试&lt;/web1:requestName>'+
+            
+            
+           
+            '&lt;web1:workflowBaseInfo>'+
+              
+               '&lt;web1:workflowId>265&lt;/web1:workflowId>'+
+             
+               '&lt;web1:workflowName>测试&lt;/web1:workflowName>'+
+              
+            '&lt;/web1:workflowBaseInfo>'+
+           
+            '&lt;web1:workflowDetailTableInfos>'+
+              
+               '&lt;web1:WorkflowDetailTableInfo>'+
+                  
+
+                  '&lt;web1:workflowRequestTableRecords>'+
+                    
+                     '&lt;web1:WorkflowRequestTableRecord>'+
+                       
+                        '&lt;web1:recordOrder>0&lt;/web1:recordOrder>'+
+                        
+                        '&lt;web1:workflowRequestTableFields>'+
+                         
+                           '&lt;web1:WorkflowRequestTableField>'+
+                              
+                              '&lt;web1:edit>true&lt;/web1:edit>'+
+                              
+                              '&lt;web1:fieldName>xsy&lt;/web1:fieldName>'+
+                             
+                              '&lt;web1:fieldShowName>销售员&lt;/web1:fieldShowName>'+
+                            
+                              '&lt;web1:fieldType>int&lt;/web1:fieldType>'+
+                           
+                              '&lt;web1:fieldValue>1410&lt;/web1:fieldValue>'+
+                              
+                              
+                              '&lt;web1:view>true&lt;/web1:view>'+
+                           '&lt;/web1:WorkflowRequestTableField>'+
+                        '&lt;/web1:workflowRequestTableFields>'+
+                     '&lt;/web1:WorkflowRequestTableRecord>'+
+                  '&lt;/web1:workflowRequestTableRecords>'+
+               '&lt;/web1:WorkflowDetailTableInfo>'+
+            '&lt;/web1:workflowDetailTableInfos>'+
         
-         '&lt;idow:strPropertyList>'+fileds+'&lt;/idow:strPropertyList>'+
-        
-         '&lt;idow:strFilter>&lt;/idow:strFilter>'+
-         
-         '&lt;idow:strOrderBy>&lt;/idow:strOrderBy>'+
-        
-         '&lt;idow:strPostQueryMethod>&lt;/idow:strPostQueryMethod>'+
-         '&lt;idow:iRecordCap>'+count+'&lt;/idow:iRecordCap>'+
-      '&lt;/idow:LoadDataSet>'+
+
+            '&lt;web1:workflowMainTableInfo>'+
+             '&lt;/web1:workflowMainTableInfo>'+
+         '&lt;/web:in0>'+
+         '&lt;web:in1>1410&lt;/web:in1>'+
+      '&lt;/web:doCreateWorkflowRequest>'+
    '&lt;/soapenv:Body>'+
 '&lt;/soapenv:Envelope>';
 </jsScript_script>
@@ -723,118 +619,8 @@ var request='&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>JavaScript代码 2</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-  var changedFrom=FromCurrCode.indexOf("CNY")!=-1?1:FromCurrCode.indexOf("EUR")!=-1?2:FromCurrCode.indexOf("HKD")!=-1?3:FromCurrCode.indexOf("JPY")!=-1?4:FromCurrCode.indexOf("USD")!=-1?5:0;
-  var changedTo=ToCurrCode.indexOf("CNY")!=-1?1:ToCurrCode.indexOf("EUR")!=-1?2:ToCurrCode.indexOf("HKD")!=-1?3:ToCurrCode.indexOf("JPY")!=-1?4:ToCurrCode.indexOf("USD")!=-1?5:0;
-  var refDate=EffDate.split("T")[0];
-  var a={"belongId":1241977617170796,"entityType":1241977577996687,"record":{"name":refDate+"-"+FromCurrCode+"-"+ToCurrCode,"customItem8__c":changedFrom,"customItem9__c":changedTo,"customItem6__c":SellRate,"updatedAt":RecordDate}}
-  var b=JSON.stringify(a);
-  </jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>b</name>
-        <rename>data10</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>720</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>创建汇率接口</name>
-    <type>Rest</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <applicationType>JSON</applicationType>
-    <method>POST</method>
-    <url/>
-    <urlInField>Y</urlInField>
-    <dynamicMethod>N</dynamicMethod>
-    <methodFieldName>method</methodFieldName>
-    <urlField>xsyUrl</urlField>
-    <bodyField>data10</bodyField>
-    <httpLogin/>
-    <httpPassword>Encrypted </httpPassword>
-    <proxyHost/>
-    <proxyPort/>
-    <preemptive>N</preemptive>
-    <trustStoreFile/>
-    <trustStorePassword>Encrypted </trustStorePassword>
-    <headers>
-      <header>
-        <field>type</field>
-        <name>Content-Type</name>
-      </header>
-      <header>
-        <field>token</field>
-        <name>Authorization</name>
-      </header>
-    </headers>
-    <parameters>
-      </parameters>
-    <matrixParameters>
-      </matrixParameters>
-    <result>
-      <name>result2</name>
-      <code/>
-      <response_time/>
-      <response_header/>
-    </result>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>816</xloc>
-      <yloc>192</yloc>
+      <xloc>464</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -884,63 +670,8 @@ var request='&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>字段选择</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <select_unspecified>N</select_unspecified>
-      <remove>
-        <name>sessionToken</name>
-      </remove>
-      <remove>
-        <name>fileds</name>
-      </remove>
-      <remove>
-        <name>count</name>
-      </remove>
-      <remove>
-        <name>SOAPAction</name>
-      </remove>
-      <remove>
-        <name>Content-Type</name>
-      </remove>
-      <remove>
-        <name>request</name>
-      </remove>
-      <remove>
-        <name>result</name>
-      </remove>
-      <remove>
-        <name>tableName</name>
-      </remove>
-      <remove>
-        <name>webService</name>
-      </remove>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>624</xloc>
-      <yloc>192</yloc>
+      <xloc>368</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -957,97 +688,13 @@ var request='&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap
     </partitioning>
     <fields>
       <field>
-        <name>token</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>Bearer 1a139c45e8be1e954978362125c2844831ea33157b35046d133706944cdb6079.Mzg3NTI4</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>type</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>application/json</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>sessionToken</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>b/XdI6IQzCviZOGJ0E+002DoKUFOPmVDkwpQDbQjm3w/qkdxDUzmqvSYEZDCmJGWpA23OTlhFpxRHFz3WOsvay8V58XdIp/UIsr5TpCdMwtW3QXF2ahwQYp2O6GzKlJcVckOUV/SBOSUYIUJFO6UvAmjgtjbeXpOTaM049ML+ZZRNPS4/Y8d1V2kJDwVSJXsqpsMkwewSjCp4lx+t74VOp9Gga7eggqP3mp2un11ccnmFvsQrEAY8pA5iphQJhnMOSjLgPttlzKaoB1CFvVzop73tBLZG+6d5AgZBJng6MeisEHca8gSLhicMLm3FTjaAUChswdtAxy53CZqY+5bYA==</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>fileds</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>ToCurrCode, FromCurrCode,EffDate,SellRate,RecordDate</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>count</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>1</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>tableName</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>SLCurrates</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>xsyUrl</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>https://api.xiaoshouyi.com/data/v1/objects/customize/create</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
         <name>webService</name>
         <type>String</type>
         <format/>
         <currency/>
         <decimal/>
         <group/>
-        <nullif>http://47.95.36.166/IDORequestService/IDOWebService.asmx</nullif>
+        <nullif>http://10.10.0.251:8089/services/WorkflowService</nullif>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
@@ -1067,8 +714,8 @@ var request='&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>192</yloc>
+      <xloc>240</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
